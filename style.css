@@ -1,0 +1,253 @@
+:root {
+	--background-color: #1F1F1F;
+	--main-color: #282828;
+	--border-color: #3E3E3E;
+	--element-color: #909090;
+	--text-color: #FFFFFF;
+	--red-element: #FF4E45;
+	--blue-element: #006BB3;
+	--green-element: #078450;
+}
+
+body {
+	position: relative;
+	background-color: var(--background-color);
+	font-family: Arial, sans-serif;
+	color: var(--text-color);
+	margin: 0;
+	padding: 0;
+	margin-top: 64px;
+	height: calc(100vh - 64px);
+}
+
+.nav-bar {
+	background-color: var(--main-color);
+	height: 40px;
+	width: 100%;
+	padding: 12px 0 12px 0;
+	box-shadow: 0 0 0.5em black;
+	position: fixed;
+	top: 0;
+	z-index: 1;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.logo-jc svg {
+	height: 45px;
+	margin: 0 0 0 24px;
+	padding: 0;
+}
+
+.ico-notife {
+	margin-left: auto;
+	float: right;
+	text-align: right;
+}
+
+.ico-notife svg {
+	height: 30px;
+	width: 30px;
+	margin: 5px 40px 0 0;
+	padding: 0;
+	cursor: pointer;
+}
+
+.ico-notife svg path {
+	stroke: var(--text-color);
+}
+
+.BarreMenu {
+	background-color: var(--main-color);
+	position: fixed;
+	height: 100%;
+	width: 250px;
+	padding-top: 25px;
+	border-right: 1px solid var(--border-color);
+}
+
+.user-info {
+	height: 20%;
+	width: 100%;
+	text-align: center;
+}
+
+.nom {
+	color: var(--element-color);
+}
+
+.pp-user {
+	height: 112px;
+	width: auto;
+	border-radius: 50%;
+	margin-bottom: 10px;
+}
+
+menu {
+	margin: 0;
+	padding: 0;
+	list-style : none;
+}
+
+li {
+	background-color: transparent;
+	appearance: none;
+	cursor: pointer;
+	border: none;
+	padding: 0;
+	margin: 0;
+	padding-top: 5px;
+
+	font-family: Arial, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	text-align: left;
+	padding-left: 20px;
+	color: var(--element-color);
+
+	border-left: 4px solid var(--main-color);
+	height: 43px;
+	width: auto;
+}
+
+li:hover {
+	border-left: 4px solid var(--element-color);
+}
+
+li.selection {
+	background-color: var(--background-color);
+	border-left: 4px solid var(--green-element);
+	color: var(--green-element);
+}
+
+.ico-menu svg {
+	margin-right: 15px;
+	height: 25px;
+	width: 25px;
+	transform: translateY(20%);
+	vertical-align: -10%;
+}
+
+.ico-menu svg path {
+	stroke: var(--element-color);
+}
+
+li.selection .ico-menu svg path {
+	stroke: var(--green-element);
+}
+
+.direct-pulse {
+    display: flex;
+    justify-content: space-between;
+}
+
+.direct-pulse .pulse {
+	margin-left: 7px;
+	margin-top: 13px;
+}
+
+li.selection .direct-pulse .pulse {
+	background-color: var(--green-element);
+}
+li.selection .direct-pulse .pulse::before {
+	border: 1px solid var(--green-element);
+}
+
+.direct-pulse p {
+	margin-right: 23%;
+	margin-top: 10px;
+}
+
+.autre-option {
+	position: fixed;
+    bottom: 20px;
+	width: 250px;
+}
+
+.page {
+	margin-left: 250px;
+	padding: 0 0 0 24px;
+	padding-top: 0;
+	width: 950px;
+}
+
+.titre-page {
+	background-color: var(--main-color);
+	border: 1px solid var(--border-color);
+	height: 100px;
+	margin-bottom: 24px;
+	position: relative;
+
+	h3 {
+		margin-left: 24px;
+	}
+
+	.profil-PF {
+		margin-left: 24px;
+
+		.select-profil {
+			background-color: var(--main-color);
+			border: 1px solid var(--border-color);
+			border-radius: 5px;
+			padding: 5px 20px;
+
+			font-size: 16px;
+			color: var(--text-color);
+			text-align: center;
+		}
+	}
+
+	.image-deco {
+		position: absolute;
+		height: 90px;
+		top: 50%;
+		right: 24px;
+		transform: translateY(-50%);
+	}
+}
+
+.notif {
+	background-color: var(--main-color);
+	border-left: 1px solid var(--border-color);
+	overflow-x: auto;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	height: calc(100vh - 64px);
+}
+
+.Barres .nav-bar .ico-notife { display: none; }
+
+@media only screen and (max-width: 1630px) {
+	.Barres .nav-bar .ico-notife { display: block; }
+}
+
+/** donnees en direct : pulse **/
+.pulse {
+	width: 10px;
+	height: 10px;
+	background-color: var(--element-color);
+	border-radius: 50%;
+	position: relative;
+}
+.pulse::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border: 1px solid var(--element-color);
+	box-sizing: border-box;
+	top: -0.5px;
+	left: -0.5px;
+	border-radius: 50%;
+	transform: scale(1);
+	animation: anim 1s infinite;
+}
+@keyframes anim {
+	0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(2);
+	}
+}

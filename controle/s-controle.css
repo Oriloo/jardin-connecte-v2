@@ -1,0 +1,204 @@
+.controles {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.declencher, .alerter {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: var(--main-color);
+	border: 1px solid var(--border-color);
+	box-sizing: border-box;
+	height: 300px;
+	width: calc(5*950px/8 - 24px);
+	margin: 0 12px 24px 12px;
+}
+
+.restriction {
+	background-color: var(--main-color);
+	border: 1px solid var(--border-color);
+	box-sizing: border-box;
+	height: 300px;
+	width: calc(3*950px/8 - 24px);
+	margin:  0 12px 24px 12px;
+}
+
+.manu-tole {
+	height: 300px;
+	width: calc(3*950px/8 - 24px);
+	margin: 0 12px 24px 12px;
+}
+
+.manuellement, .tolerance {
+	background-color: var(--main-color);
+	border: 1px solid var(--border-color);
+	box-sizing: border-box;
+	height: calc(150px - 12px);
+	width: calc(3*950px/8 - 24px);
+}
+
+.manuellement {
+	margin-bottom: 24px;
+}
+
+.titre-cellule {
+	border-bottom: 1px solid var(--border-color);
+	font-weight: bold;
+	text-align: center;
+	height: 35px;
+	width: 100%;
+	padding-top: 15px;
+}
+
+.cel2 {
+	display: flex;
+    justify-content: space-between;
+}
+
+#v-1 button, #v-2 button, #v-3 button, #v-4 button {
+	all: unset;
+	height: 25px;
+	width: 25px;
+	margin: 0 20px 0 20px;
+}
+
+#v-1 button svg, #v-2 button svg, #v-3 button svg, #v-4 button svg {
+	height: 25px;
+	width: 25px;
+	cursor: pointer;
+}
+
+#x-1 svg, #x-2 svg, #x-3 svg, #x-4 svg {
+	height: 25px;
+	width: 25px;
+	margin: 0 20px 0 20px;
+	cursor: pointer;
+}
+
+.titre-cellule svg path {
+	stroke: var(--element-color);
+}
+
+.titre-cellule svg:hover path {
+	stroke: var(--text-color);
+}
+
+.slider {
+    align-items: center;
+	border-top: 1px solid var(--border-color);
+	box-sizing: border-box;
+	height: calc((100% - 50px)/4);
+	width: 100%;
+}
+
+form {
+	width: 100%;
+}
+
+.slider-valeurs {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.slider-info1-1, .slider-info1-2, .slider-info1-3, .slider-info1-4, 
+.slider-info2-1, .slider-info2-2, .slider-info2-3, .slider-info2-4, 
+.slider-info3-1, .slider-info4-1 {
+	margin: 10px 0 10px 0;
+}
+
+.slider-min, .slider-max {
+	margin: 10px 20px 10px 20px;
+	width: 15%;
+}
+
+.slider-max {
+	text-align: right;
+}
+
+#slider1-1, #slider1-2, #slider1-3, #slider1-4, 
+#slider2-1, #slider2-2, #slider2-3, #slider2-4, 
+#slider3-1, #slider4-1 {
+	width: 90%;
+	margin: 0 5% 0 5%;
+}
+
+.declencher, .restriction {
+	.range-slider .range-slider__thumb {
+		background: var(--blue-element);
+	}
+	.range-slider {
+		background: var(--blue-element);
+		.range-slider__range {
+			background: var(--element-color);
+		}
+	}
+	#slider1-1 {
+		background: var(--element-color);
+		.range-slider__range {
+			background: var(--blue-element);
+		}
+	}
+}
+
+.alerter .range-slider {
+	background: var(--red-element);
+	.range-slider__thumb {
+		background: var(--red-element);
+	}
+	.range-slider__range {
+		background: var(--element-color);
+	}
+}
+
+.tolerance {
+	.range-slider {
+		background: var(--green-element);
+		.range-slider__thumb {
+			background: var(--green-element);
+		}
+		.range-slider__range {
+			background: var(--element-color);
+		}
+	}
+}
+
+.bouton-arrosage {
+	background-color: var(--main-color);
+	height: 50px;
+	width: 150px;
+	border-radius: 30px;
+	border: 8px solid var(--element-color);
+	margin: 10px 0 0 80px;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	cursor: pointer;
+}
+
+.bouton-arrosage svg {
+	margin: 0 0 0 calc((150px - 50px)/2);
+	height: 50px;
+	width: 50px;
+}
+
+.bouton-arrosage svg path {
+	stroke: var(--element-color);
+}
+
+.bouton-arrosage:hover {
+	background-color: var(--green-element);
+	border: 8px solid var(--main-color);
+}
+
+.bouton-arrosage:hover svg path {
+	stroke: var(--main-color);
+}
+
+.select-symbole {
+	background-color: var(--main-color);
+	border: 1px solid var(--border-color);
+	border-radius: 5px;
+
+	font-size: 16px;
+	color: var(--text-color);
+	text-align: center;
+}

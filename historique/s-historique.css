@@ -1,0 +1,182 @@
+.histo {
+	background: var(--main-color);
+	border: 1px solid var(--border-color);
+	box-sizing: border-box;
+	height: 655px;
+	width: 100%;
+}
+
+.onglets {
+	background: var(--background-color);
+	border-bottom: 1px 1px 0 1px solid var(--border-color);
+	box-sizing: border-box;
+	height: 30px;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.onglets-bar {
+	display: flex;
+}
+
+.onglets-nav {
+	overflow-x: scroll;
+	white-space: nowrap;
+	font-size: 0;
+	width: 650px;
+}
+
+.onglet {
+	font-family: Arial, sans-serif;
+	color: var(--text-color);
+	font-size: 15px;
+	display: inline-block;
+	background-color: var(--main-color);
+	border-top: 1px solid var(--border-color);
+	border-right: 1px solid var(--border-color);
+	box-sizing: border-box;
+	height: 100%;
+	width: auto;
+	padding: 5px 20px;
+}
+
+.scroll {
+	font-family: Arial, sans-serif;
+	color: #FFF;
+	//font-size: 15px;
+	text-align: center;
+	background-color: var(--main-color);
+	border: 1px solid #353535;
+	padding: 4px;
+	width: 20px;
+}
+
+.scroll:hover {
+	cursor: pointer;
+}
+
+.scroll-right{
+	float:right;
+}
+.scroll-left{
+	float:left;
+}
+
+.onglet:hover {
+	cursor: pointer;
+}
+
+.pageHisto {
+    width: 100%;
+    height: calc(100% - 50px);
+	margin: 10px 0 10px 0;
+    overflow: auto;
+    position: relative;
+}
+
+.tablesHisto {
+	border-collapse: collapse;
+	margin: 0 10px 0 10px;
+	width: calc(100% - 20px);
+	box-sizing: border-box;
+}
+
+.tablesHisto thead {
+	background-color: var(--background-color);
+	border: 1px solid var(--border-color);
+	box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.tablesHisto th, .tablesHisto td {
+	text-align: center;
+	margin: 0;
+	padding: 2px 0 2px 0;
+	border: 1px solid var(--border-color);
+	box-sizing: border-box;
+}
+
+.tablesHisto thead th, .tablesHisto thead td {
+	padding: 5px 0 5px 0;
+}
+
+.tablesHisto tbody > tr:nth-of-type(even) {
+	background-color: var(--background-color);
+}
+
+.dateDay_onglet {
+	height: 30px;
+	border-left: 1px solid var(--border-color);
+	padding: 0 0 0 25px;
+	box-sizing: border-box;
+	display: flex;
+    align-items: center;
+}
+
+.inputContainer {
+    display: flex;
+    margin-left: auto;
+}
+
+.selecteurDate input[type="date"] {
+	margin: 0 20px 0 5px;
+	border: none;
+	background-color: var(--background-color);
+	color: var(--text-color);
+}
+
+#ButtonSearch {
+	appearance: none;
+	padding: 0;
+	margin: 0;
+	background: none;
+	border: none;
+}
+
+#ButtonSearch svg {
+	height: 25px;
+	width: 25px;
+}
+
+#ButtonSearch svg path {
+	stroke: var(--element-color);
+}
+
+#ButtonSearch:hover {
+	cursor: pointer;
+}
+
+#ButtonSearch:hover svg path {
+	stroke: var(--text-color);
+}
+
+.histo .pageHisto > div {
+    display: none;
+}
+
+.ongletSelect {
+	border-top: 1px solid #078450;
+	background: var(--main-color);
+}
+
+.histo-vide {
+	text-align: center;
+}
+
+.histo-vide svg {
+	width: 600px;
+	margin-top: 20%;
+}
+
+.histo-vide .cls-1, .histo-vide .cls-2, .histo-vide .cls-3 {
+	fill: var(--border-color);
+}
+
+.pas-trouver {
+	color: var(--border-color);
+	font-weight: bold;
+	font-size: 30px;
+}

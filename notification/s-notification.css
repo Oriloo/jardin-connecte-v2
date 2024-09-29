@@ -1,0 +1,47 @@
+.notif {
+	z-index: 4;
+}
+
+.nav-notif {
+	background-color: var(--main-color);
+	width: 100%;
+	border-top: 1px solid var(--border-color);
+	border-bottom: 1px solid var(--border-color);
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	.titre-notif {
+		padding: 10px 0 10px 10px;
+		color: var(--text-color);
+		font-family: Arial, sans-serif;
+		font-size: 20px;
+		font-weight: bold;
+	}
+
+	.ico-notife2 svg {
+		height: 30px;
+		width: 30px;
+		margin-right: 10px;
+		path { stroke: var(--text-color); }
+	}
+}
+
+.zone-notif {
+	font-family: Arial, sans-serif;
+
+	.notif-item {
+		padding: 10px;
+		border: 1px solid var(--border-color);
+		margin-bottom: 10px;
+	}
+}
+
+.notif-Arrosage { color: var(--blue-element); }
+.notif-Alerte { color: var(--red-element); }
+
+@media only screen and (max-width: 1630px) {
+	.notif { display: none; }
+	.notif .nav-notif .ico-notife2 { display: none; }
+}

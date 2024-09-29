@@ -1,0 +1,52 @@
+.tableaubord {
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+}
+
+.vignette {
+	background-color: var(--main-color);
+	border: 1px solid var(--border-color);
+	border-top: 4px solid var(--border-color);
+	box-sizing: border-box;
+	height: 200px;
+	width: calc(950px/4 - 24px);
+	margin: 0 12px 24px 12px;
+}
+
+.mesure-v { border-top: 4px solid var(--green-element); }
+.colorAlerte { border-top: 4px solid var(--red-element); }
+.colorArrose { border-top: 4px solid var(--blue-element); }
+
+.v-info {
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: center;
+}
+
+.v-seuils {
+	text-align: left;
+	width: auto;
+}
+
+.v-valeurs {
+	text-align: right;
+	margin-left: 10px;
+	width: auto;
+}
+
+.svg-vignette svg {
+	height: 50px;
+	width: 50px;
+	margin-top: 20px;
+}
+
+.svg-v-petit svg {
+	height: 40px;
+	width: 40px;
+	margin-top: 12px;
+}
+
+.svg-vignette svg path {
+	stroke: var(--element-color);
+}
