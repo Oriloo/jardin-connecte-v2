@@ -43,6 +43,6 @@ $stmt->close();
 $conn->close();
 
 // Redirection vers ../index.php
-header("Location: ../../index.php?profil=potager");
+header("Location: ../../controle/controle.php?profil=potager");
 exit(); // Assure que le script s'arrête après la redirection
 ?>

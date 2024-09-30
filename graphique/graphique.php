@@ -18,10 +18,10 @@ include('../connexion/test-connexion.php')
 
 <body>
 	<?php
+	include('../script/SelectionTable.php');
 	include('../menu.php');
 	include('../script/variablesBdd.php');
 	include('../script/variablesTable.php');
-	include('../script/SelectionTable.php');
 	?>
 
 	<div class="page">
@@ -33,6 +33,7 @@ include('../connexion/test-connexion.php')
 					<option value="potager" selected>Potager</option>
 					<option value="fleurs">Fleurs</option>
 				</select>
+				<script type="text/javascript" src="../script/profil.js"></script>
 			</div>
 		</div>
 

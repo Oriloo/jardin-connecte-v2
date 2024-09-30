@@ -35,15 +35,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO $Table_AlertesS (date, time, modif_par, temp_min, temp_max, huma_min, huma_max, hums_min, hums_max, lumi_min, lumi_max) VALUES ('$date', '$heure', '$UserID', '$minV21', '$maxV21', '$minV22', '$maxV22', '$minV23', '$maxV23', '$minV24', '$maxV24')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Enregistrement réussi!";
+        // echo "Enregistrement réussi!";
     } else {
-        echo "Erreur d'enregistrement: " . $conn->error;
+        // echo "Erreur d'enregistrement: " . $conn->error;
     }
 
     $conn->close();
 
     // Redirection vers ../index.php
-    header("Location: ../../index.php?profil=$selectedTable");
+    header("Location: ../../controle/controle.php?profil=$selectedTable");
     exit(); // Assure que le script s'arrête après la redirection
 }
 ?>

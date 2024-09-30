@@ -51,15 +51,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO $Table_ArrosageS (date, time, modif_par, temp_min_d, temp_max_d, huma_d, hums_d, lumi_d, huma_si, hums_si, lumi_si) VALUES ('$date', '$heure', '$UserID', '$lowerValue11', '$upperValue11', '$upperValue12', '$upperValue13', '$upperValue14', '$sSI2', '$sSI3', '$sSI4')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Enregistrement réussi!";
+        // echo "Enregistrement réussi!";
     } else {
-        echo "Erreur d'enregistrement: " . $conn->error;
+        // echo "Erreur d'enregistrement: " . $conn->error;
     }
 
     $conn->close();
 
     // Redirection vers ../index.php
-    header("Location: ../../index.php?profil=$selectedTable");
+    header("Location: ../../controle/controle.php?profil=$selectedTable");
     exit(); // Assure que le script s'arrête après la redirection
 }
 ?>

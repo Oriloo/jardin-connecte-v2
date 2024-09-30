@@ -19,10 +19,10 @@ include('../connexion/test-connexion.php')
 
 <body>
 	<?php
+	include('../script/SelectionTable.php');
 	include('../menu.php');
 	include('../script/variablesBdd.php');
 	include('../script/variablesTable.php');
-	include('../script/SelectionTable.php');
 
 	include('../script/LectureBDD/LectureAlertesS.php');
 	include('../script/LectureBDD/LectureDeclencheS.php');
@@ -39,6 +39,7 @@ include('../connexion/test-connexion.php')
 					<option value="potager" selected>Potager</option>
 					<option value="fleurs">Fleurs</option>
 				</select>
+				<script type="text/javascript" src="../script/profil.js"></script>
 			</div>
 		</div>
 
@@ -337,7 +338,7 @@ include('../connexion/test-connexion.php')
 		if (confirmation) {
 			// l'utilisateur a confirmé
 			alert("Arrosage en cours...");
-			window.location.href = 'script/EcritureBDD/SaveArrosage.php?UserID=<?php echo $UserID; ?>&selectedTable=<?php echo $selectedTable; ?>';
+			window.location.href = '../script/EcritureBDD/SaveArrosage.php?UserID=<?php echo $UserID; ?>&selectedTable=<?php echo $selectedTable; ?>';
 		} else {
 			// l'utilisateur a annulé
 			alert("Arrosage annulé.");

@@ -25,14 +25,14 @@ if ($selectedTable == "potager") {
 $sql = "INSERT INTO $Table_Arrosage (date, time, declencher_par) VALUES ('$date', '$heure', '$UserID')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Enregistrement réussi!";
+    // echo "Enregistrement réussi!";
 } else {
-    echo "Erreur d'enregistrement. " . $conn->error;
+    // echo "Erreur d'enregistrement. " . $conn->error;
 }
 
 $conn->close();
 
 // Redirection vers ../../index.php
-header("Location: ../../index.php?profil=$selectedTable");
+header("Location: ../../controle/controle.php?profil=$selectedTable");
 exit(); // Assure que le script s'arrête après la redirection
 ?>

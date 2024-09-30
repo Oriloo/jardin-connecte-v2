@@ -32,16 +32,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO $Table_ArrosageH (date, time, modif_par, heure_min, heure_max) VALUES ('$date', '$heure', '$UserID', '$minV41', '$maxV41')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Enregistrement réussi!";
+        // echo "Enregistrement réussi!";
     } else {
-        echo "Erreur d'enregistrement: " . $conn->error;
+        // echo "Erreur d'enregistrement: " . $conn->error;
     }
 
     // Fin de connexion de la BDD
     $conn->close();
 
     // Redirection vers ../index.php
-    header("Location: ../../index.php?profil=$selectedTable");
+    header("Location: ../../controle/controle.php?profil=$selectedTable");
     exit(); // Assure que le script s'arrête après la redirection
 }
 ?>
