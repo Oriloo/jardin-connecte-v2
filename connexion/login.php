@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['Theme'] = $Theme;
 
             // Redirection vers ../index.php
-            header("Location: ../tableau-bord/tableau-bord.php?profil=potager");
+            header("Location: ../tableau-bord/?profil=potager");
             exit(); // Assure que le script s'arrête après la redirection
         }
     } else {

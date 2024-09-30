@@ -32,7 +32,7 @@
 
 		<!-- Liste des sections avec icônes -->
 		<menu id="menu-liste">
-			<a href="../tableau-bord/tableau-bord.php?profil=<?php echo $selectedTable; ?>">
+			<a href="../tableau-bord/?profil=<?php echo $selectedTable; ?>">
 				<li id="liste-table">
 					<div class="ico-menu">
 						<?php include('image/svg/tableau-ico.svg'); ?>
@@ -40,7 +40,7 @@
 					</div>
 				</li>
 			</a>
-			<a href="../donnee-direct/donnee-direct.php?profil=<?php echo $selectedTable; ?>">
+			<a href="../donnee-direct/?profil=<?php echo $selectedTable; ?>">
 				<li id="liste-direc">
 					<div class="ico-menu direct-pulse">
 						<div class="pulse"></div>
@@ -48,7 +48,7 @@
 					</div>
 				</li>
 			</a>
-			<a href="../graphique/graphique.php?profil=<?php echo $selectedTable; ?>">
+			<a href="../graphique/?profil=<?php echo $selectedTable; ?>">
 				<li id="liste-grphe">
 					<div class="ico-menu">
 						<?php include('image/svg/graph-ico.svg'); ?>
@@ -56,7 +56,7 @@
 					</div>
 				</li>
 			</a>
-			<a href="../controle/controle.php?profil=<?php echo $selectedTable; ?>">
+			<a href="../controle/?profil=<?php echo $selectedTable; ?>">
 				<li id="liste-contr">
 					<div class="ico-menu">
 						<?php include('image/svg/sliders-ico.svg'); ?>
@@ -64,7 +64,7 @@
 					</div>
 				</li>
 			</a>
-			<a href="../historique/historique.php?profil=<?php echo $selectedTable; ?>">
+			<a href="../historique/?profil=<?php echo $selectedTable; ?>">
 				<li id="liste-histo">
 					<div class="ico-menu">
 						<?php include('image/svg/hitorique-ico.svg'); ?>
@@ -72,7 +72,7 @@
 					</div>
 				</li>
 			</a>
-			<a href="../parametre/parametre.php?profil=<?php echo $selectedTable; ?>">
+			<a href="../parametre/?profil=<?php echo $selectedTable; ?>">
 				<li id="liste-param">
 					<div class="ico-menu">
 						<?php include('image/svg/param-ico.svg'); ?>

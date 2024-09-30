@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn->close();
 
     // Redirection vers ../index.php
-    header("Location: ../../controle/controle.php?profil=$selectedTable");
+    header("Location: ../../controle/?profil=$selectedTable");
     exit(); // Assure que le script s'arrête après la redirection
 }
 ?>
