@@ -2,6 +2,9 @@
 // Inclure les variables de connexion
 include('../variablesBdd.php');
 
+// Inclure la bibliothèque PclZip
+require_once('../../bibliotheque/pclzip.lib.php');
+
 // Création de la connexion
 $conn = new mysqli($serveur, $utilisateur, $motDePasse, $nomBdd);
 
@@ -30,7 +33,7 @@ foreach ($tables as $table) {
     $sql = "SELECT * FROM $table";
     $result = $conn->query($sql);
 
-    if ($result->num_rows > 0) {
+    if ($result && $result->num_rows > 0) {
         // Récupération des noms des colonnes
         $row = $result->fetch_assoc();
         $header = array_keys($row);
@@ -46,34 +49,30 @@ foreach ($tables as $table) {
     fclose($file);
 }
 
-// Création du fichier ZIP en mémoire
+// Création du fichier ZIP en utilisant PclZip
 $zipFilename = "export_all_tables_" . date("Y-m-d_H-i", time()) . ".zip";
-$zip = new ZipArchive();
-$tempZipFile = tempnam(sys_get_temp_dir(), 'zip');
-if ($zip->open($tempZipFile, ZipArchive::CREATE) === TRUE) {
-    // Ajouter chaque fichier CSV au fichier ZIP
-    foreach ($tables as $table) {
-        $filename = "$tempDir/$table.csv";
-        $zip->addFile($filename, "$table.csv");
-    }
-    $zip->close();
+$zipFilePath = "$tempDir/$zipFilename";
+$zip = new PclZip($zipFilePath);
 
-    // Configuration des en-têtes HTTP pour le téléchargement du fichier ZIP
-    header('Content-Type: application/zip');
-    header('Content-Disposition: attachment; filename="' . $zipFilename . '"');
-    header('Content-Length: ' . filesize($tempZipFile));
+// Récupérer la liste des fichiers CSV à ajouter
+$csvFiles = glob("$tempDir/*.csv");
 
-    // Envoi du fichier ZIP au client
-    readfile($tempZipFile);
-
-    // Suppression du fichier temporaire ZIP
-    unlink($tempZipFile);
-} else {
-    die("Échec de la création du fichier ZIP");
+// Ajouter les fichiers CSV à l'archive ZIP
+if ($zip->create($csvFiles, PCLZIP_OPT_REMOVE_PATH, $tempDir) == 0) {
+    die("Échec de la création du fichier ZIP : " . $zip->errorInfo(true));
 }
+
+// Configuration des en-têtes HTTP pour le téléchargement du fichier ZIP
+header('Content-Type: application/zip');
+header('Content-Disposition: attachment; filename="' . $zipFilename . '"');
+header('Content-Length: ' . filesize($zipFilePath));
+
+// Envoi du fichier ZIP au client
+readfile($zipFilePath);
 
 // Nettoyage des fichiers temporaires
 array_map('unlink', glob("$tempDir/*.csv"));
+unlink($zipFilePath);
 rmdir($tempDir);
 
 // Fermeture de la connexion

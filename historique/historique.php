@@ -7,7 +7,7 @@ include('../connexion/test-connexion.php')
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Jardin Connecté | Contrôle</title>
+	<title>Jardin Connecté | Historiques</title>
 	<link rel="icon" href="../image/svg/logo-jc.svg" />
 	<link rel="stylesheet" href="../style.css">
 	<link rel="stylesheet" href="s-historique.css">
@@ -28,7 +28,7 @@ include('../connexion/test-connexion.php')
 
 	<div class="page">
 		<div class="titre-page">
-			<h3>Contrôle</h3>
+			<h3>Historiques</h3>
 			<div class="profil-PF">
 				<label for="select-profil-text">Données : </label>
 				<select class="select-profil" id="select-profil">

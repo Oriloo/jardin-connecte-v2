@@ -1,3 +1,10 @@
+#liste-param {
+	background-color: var(--background-color);
+	border-left: 4px solid var(--green-element);
+	color: var(--green-element);
+	.ico-menu svg path { stroke: var(--green-element); }
+}
+
 .parametre-box {
 	display: flex;
 	flex-wrap: wrap;
