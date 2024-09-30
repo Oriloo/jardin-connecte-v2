@@ -62,29 +62,29 @@ document.addEventListener('DOMContentLoaded', function() {
     // Masquer les champs de dates personnalisées au chargement de la page
     datesPersonnalisees.style.display = 'none';
     
-// Ajoutez un gestionnaire d'événements pour le changement de sélection
-periodeHoraireSelect.addEventListener('change', function() {
-    // Vérifier si l'option Période personnalisée est sélectionnée
-    if (periodeHoraireSelect.value === 'periode') {
-        // Afficher les champs de dates personnalisées
-        datesPersonnalisees.style.display = 'block';
-    } else {
-        // Masquer les champs de dates personnalisées
-        datesPersonnalisees.style.display = 'none';
-    }
+    // Ajoutez un gestionnaire d'événements pour le changement de sélection
+    periodeHoraireSelect.addEventListener('change', function() {
+        // Vérifier si l'option Période personnalisée est sélectionnée
+        if (periodeHoraireSelect.value === 'periode') {
+            // Afficher les champs de dates personnalisées
+            datesPersonnalisees.style.display = 'block';
+        } else {
+            // Masquer les champs de dates personnalisées
+            datesPersonnalisees.style.display = 'none';
+        }
 
-    // Vérifier si l'option sélectionnée est différente de 'periode' ou 'toujours'
-    if (periodeHoraireSelect.value !== 'periode' && periodeHoraireSelect.value !== 'toujours') {
-        // Masquer le bouton de mise à jour
-        document.getElementById('ButtonUpdate').style.display = 'none';
-    } else {
-        // Afficher le bouton de mise à jour
-        document.getElementById('ButtonUpdate').style.display = 'block';
-    }
+        // Vérifier si l'option sélectionnée est différente de 'periode' ou 'toujours'
+        if (periodeHoraireSelect.value !== 'periode' && periodeHoraireSelect.value !== 'toujours') {
+            // Masquer le bouton de mise à jour
+            document.getElementById('ButtonUpdate').style.display = 'none';
+        } else {
+            // Afficher le bouton de mise à jour
+            document.getElementById('ButtonUpdate').style.display = 'block';
+        }
 
-    // Stocker la valeur sélectionnée dans le stockage local
-    localStorage.setItem('lastSelectedOption', periodeHoraireSelect.value);
-});
+        // Stocker la valeur sélectionnée dans le stockage local
+        localStorage.setItem('lastSelectedOption', periodeHoraireSelect.value);
+    });
 
     // Vérifiez s'il y a une valeur stockée dans le stockage local
     var lastSelectedOption = localStorage.getItem('lastSelectedOption');
