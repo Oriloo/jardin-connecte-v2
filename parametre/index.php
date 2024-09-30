@@ -54,10 +54,10 @@ include('../connexion/test-connexion.php')
 					<div class="image-pp">
 						<img src="../image/pp/pp1.png" class="profile-pic" value="1">
 						<img src="../image/pp/pp2.png" class="profile-pic" value="2">
-						<img src="../image/pp/pp5.png" class="profile-pic" value="3">
-						<img src="../image/pp/pp6.png" class="profile-pic" value="4">
-						<img src="../image/pp/pp3.png" class="profile-pic" value="5">
-						<img src="../image/pp/pp4.png" class="profile-pic" value="6">
+						<img src="../image/pp/pp5.png" class="profile-pic" value="5">
+						<img src="../image/pp/pp6.png" class="profile-pic" value="6">
+						<img src="../image/pp/pp3.png" class="profile-pic" value="3">
+						<img src="../image/pp/pp4.png" class="profile-pic" value="4">
 						<img src="../image/pp/pp7.png" class="profile-pic" value="7">
 						<img src="../image/pp/pp8.png" class="profile-pic" value="8">
 						<img src="../image/pp/pp9.png" class="profile-pic" value="9">
