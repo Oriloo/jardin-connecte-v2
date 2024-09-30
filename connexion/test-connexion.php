@@ -18,7 +18,7 @@ if (isset($_SESSION['userID']) &&
     
 } else {
     // Les informations de session n'existent pas, rediriger vers la page de connexion
-    header("Location: pages/Connexion.php");
+    header("Location: ../connexion/connexion.php");
     exit(); // Assure que le script s'arrête après la redirection
 }
 ?>

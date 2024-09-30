@@ -5,8 +5,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
     $password = $_POST["password"];
 
-    include('../variablesBdd.php');
-    include('../variablesTable.php');
+    include('../script/variablesBdd.php');
+    include('../script/variablesTable.php');
 
     // Connexion à la base de données
     $connexion = new mysqli($serveur, $utilisateur, $motDePasse, $nomBdd);
@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['Theme'] = $Theme;
 
             // Redirection vers ../index.php
-            header("Location: ../../index.php?profil=potager");
+            header("Location: ../tableau-bord/tableau-bord.php?profil=potager");
             exit(); // Assure que le script s'arrête après la redirection
         }
     } else {
@@ -67,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         sleep(3);
 
         // Redirection vers ../index.php
-        header("Location: ../../pages/Connexion.php");
+        header("Location: connexion.php");
         exit(); // Assure que le script s'arrête après la redirection
     }
 

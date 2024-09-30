@@ -24,15 +24,15 @@ session_destroy();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../image/svg/logo-jc.svg" />
     <title>Page de Connexion</title>
-    <link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="../style/connexion.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="s-connexion.css">
 </head>
 <body>
     <nav> <img class="logo-jc" src="../image/svg/logo-jc-nom.svg" /> </nav>
 
     <div class="login-container">
         <h2>Connexion</h2>
-        <form action="../script/Compte/login.php" method="post">
+        <form action="login.php" method="post">
             <label for="username">Nom d'utilisateur:</label>
             <input type="text" id="username" name="username" required>
 
