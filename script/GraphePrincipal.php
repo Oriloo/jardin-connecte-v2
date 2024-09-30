@@ -1,6 +1,8 @@
 <script type="text/javascript">
 $(function () {
 	function createHighchart(containerId, titleText, yAxisText, types, couleurs, datetime, data, yAxisMin, yAxisMax) {
+		var CSSelementColor = "#FFFFFF";
+		
 		$('#' + containerId).highcharts({
 			chart: {
 				backgroundColor: 'transparent',

@@ -12,8 +12,8 @@ include('../connexion/test-connexion.php')
 	<link rel="stylesheet" href="../style.css">
 	<link rel="stylesheet" href="s-graphique.css">
 	<!-- Bibliothèques -->
-	<script type="text/javascript" src="../biblioteque/highcharts.js"></script>
-	<script type="text/javascript" src="../biblioteque/jquery.min.js"></script>
+	<script type="text/javascript" src="../bibliotheque/jquery.min.js"></script>
+	<script type="text/javascript" src="../bibliotheque/highcharts.js"></script>
 </head>
 
 <body>
@@ -21,6 +21,7 @@ include('../connexion/test-connexion.php')
 	include('../menu.php');
 	include('../script/variablesBdd.php');
 	include('../script/variablesTable.php');
+	include('../script/SelectionTable.php');
 	?>
 
 	<div class="page">
@@ -120,6 +121,8 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('HumA_Moy').innerText = humAMoy;
     document.getElementById('HumS_Moy').innerText = humSMoy;
     document.getElementById('Lumi_Moy').innerText = lumiMoy;
+
+	/////////////////////////////////////////////////////////////////////////
 
 	// Récupérer les dates du tableau $Date
 	var dates = <?php echo json_encode($Date); ?>;

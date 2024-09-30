@@ -12,8 +12,8 @@ include('../connexion/test-connexion.php')
 	<link rel="stylesheet" href="../style.css">
 	<link rel="stylesheet" href="s-donnee-direct.css">
     <!-- Bibliothèques -->
-    <script type="text/javascript" src="../biblioteque/highcharts.js"></script>
-    <script type="text/javascript" src="../biblioteque/jquery.min.js"></script>
+    <script type="text/javascript" src="../bibliotheque/jquery.min.js"></script>
+    <script type="text/javascript" src="../bibliotheque/highcharts.js"></script>
 </head>
 
 <body>
@@ -21,14 +21,15 @@ include('../connexion/test-connexion.php')
 	include('../menu.php');
 	include('../script/variablesBdd.php');
 	include('../script/variablesTable.php');
+	include('../script/SelectionTable.php');
 
 	include('../script/LectureBDD/LectureMesure24h.php');
-    include('../script/GrapheDirect.php')
+	include('../script/GrapheDirect.php')
 	?>
 
 	<div class="page">
 		<div class="titre-page">
-			<h3>Tableau de Bord</h3>
+			<h3>Données en direct</h3>
 			<div class="profil-PF">
 				<label for="select-profil-text">Données : </label>
 				<select class="select-profil" id="select-profil">

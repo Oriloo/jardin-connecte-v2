@@ -18,6 +18,7 @@ include('../connexion/test-connexion.php')
 	include('../menu.php');
 	include('../script/variablesBdd.php');
 	include('../script/variablesTable.php');
+	include('../script/SelectionTable.php');
 
 	include('../script/LectureBDD/LectureAlertesS.php');
 	include('../script/LectureBDD/LectureArrosage.php');

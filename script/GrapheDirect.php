@@ -1,6 +1,9 @@
 <script type="text/javascript">
 $(function () {
 	function createHighchart(containerId, titres, datas, heures, minY, maxY) {
+		var CSSelementColor = "#FFFFFF";
+		var CSSgreenElement = "#078450";
+
 		$('#' + containerId).highcharts({
 			chart: {
 				backgroundColor: 'transparent',
