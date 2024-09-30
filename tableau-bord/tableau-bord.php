@@ -8,14 +8,14 @@ include('../connexion/test-connexion.php')
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Jardin Connecté | Tableau de Bord</title>
-	<link rel="icon" href="image/svg/logo-jc.svg" />
+	<link rel="icon" href="../image/svg/logo-jc.svg" />
 	<link rel="stylesheet" href="../style.css">
 	<link rel="stylesheet" href="s-tableau-bord.css">
 </head>
 
 <body>
 	<?php
-	include('../index.php');
+	include('../menu.php');
 	include('../script/variablesBdd.php');
 	include('../script/variablesTable.php');
 
