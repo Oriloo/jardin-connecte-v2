@@ -25,7 +25,7 @@
 			?>
 			<img class="pp-user" src="<?php echo $avatarFile; ?>" alt="Avatar"> <br>
 			<strong class="grade">
-				Administrateur
+				<?php echo ($isAdmin == 1) ? "Administrateur" : "Utilisateur"; ?>
 			</strong>
 			<div class="nom"></div>
 		</div>
@@ -83,14 +83,12 @@
 
 			<div class="autre-option">
 				<!-- Bouton de déconnexion -->
-				<a href="../connexion/logout.php">
-					<li id="liste-decon">
-						<div class="ico-menu">
-							<?php include('image/svg/deco-ico.svg'); ?>
-							Déconnexion
-						</div>
-					</li>
-				</a>
+				<li id="liste-decon" onclick="showLogoutConfirmation()">
+					<div class="ico-menu">
+						<?php include('image/svg/deco-ico.svg'); ?>
+						Déconnexion
+					</div>
+				</li>
 
 				<!-- Bouton d'aides -->
 				<li id="liste-aides">
@@ -107,3 +105,36 @@
 <!-- Zone de Notif
 <div class="notif"></div>
 -->
+
+<script type="text/javascript">
+// Fonction pour afficher la confirmation de déconnexion
+function showLogoutConfirmation() {
+	var isConfirmed = confirm("Êtes-vous sûr de vouloir vous déconnecter?");
+	if (isConfirmed) {
+		// Redirige vers la page de déconnexion
+		window.location.href = "../connexion/logout.php";
+	}
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    const theme = <?php echo $Theme; ?>;
+
+    // Supprimer toutes les classes de thème existantes
+    document.documentElement.classList.remove('theme-clair', 'theme-sombre', 'theme-noir', 'theme-neon', 'theme-grie', 'theme-orange');
+
+    // Appliquer le thème correspondant
+    if (theme == 0) {
+        document.documentElement.classList.add('theme-clair');
+    } else if (theme == 1) {
+        document.documentElement.classList.add('theme-sombre');
+    } else if (theme == 2) {
+        document.documentElement.classList.add('theme-noir');
+    } else if (theme == 3) {
+        document.documentElement.classList.add('theme-neon');
+    } else if (theme == 4) {
+        document.documentElement.classList.add('theme-grie');
+    } else if (theme == 5) {
+        document.documentElement.classList.add('theme-orange');
+    }
+});
+</script>

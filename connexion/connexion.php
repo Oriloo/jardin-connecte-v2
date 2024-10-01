@@ -28,6 +28,7 @@ session_destroy();
     <link rel="stylesheet" href="s-connexion.css">
 </head>
 <body>
+    <?php include('../script/variablesStyle.php'); ?>
     <nav> <img class="logo-jc" src="../image/svg/logo-jc-nom.svg" /> </nav>
 
     <div class="login-container">

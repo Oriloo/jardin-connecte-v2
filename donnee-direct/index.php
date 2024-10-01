@@ -18,6 +18,7 @@ include('../connexion/test-connexion.php')
 
 <body>
 	<?php
+	include('../script/variablesStyle.php');
 	include('../script/SelectionTable.php');
 	include('../menu.php');
 	include('../script/variablesBdd.php');
